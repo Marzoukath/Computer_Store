@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 20px;
+}
+.card-content h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+.card-content p {
+    margin: 5px 0;
+    color: #555;
+}
+.price {
+    font-size: 1.5em;
+    color: #e60023;
+    margin: 10px 0;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+}
+.actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modify-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
