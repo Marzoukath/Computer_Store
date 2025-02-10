@@ -8,16 +8,17 @@
     align-items: center;
     height: 100vh;
   } */
-
   .container {
+    margin-top: 70px; /* Ajoute une marge égale à la largeur de la navbar */
     display: flex;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 900px;
-    width: 100%;
+    width: calc(100% - 220px); /* Ajuste la largeur en fonction de la navbar */
   }
+  
 
   .form-container {
     padding: 20px;
@@ -105,13 +106,32 @@
       height: 200px;
     }
   }
-  /* select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 1rem;
+  .navbar {
+    position: fixed; /* Fixée en haut de la page */
+    top: 1;
+    left: 1;
+    right: 0;
+    width: 83.5%; /* Occupe toute la largeur de l'écran */
+    height: 60px; /* Ajuste la hauteur selon tes besoins */
+    background-color: #f8f9fa; /* Couleur de fond */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre en bas */
+    display: flex;
+    align-items: center; /* Aligne les éléments verticalement */
+    padding: 0 20px; /* Ajoute un espace horizontal interne */
+    z-index: 1000; /* S'assurer qu'elle est au-dessus du contenu */
   }
-   */
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px; 
+    font-size: 16px; 
+  }
+  
+  .navbar a:hover {
+    background-color: #007bff;
+    color: #fff;
+     /* Ajoute un effet survol */
+    border-radius: 8px;
+  }
+  

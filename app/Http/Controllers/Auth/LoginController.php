@@ -28,8 +28,12 @@ class LoginController extends Controller
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
 
-            return redirect()->route('index');
+            return redirect()->intended(route('index'));
         }
+        // $credentials = $request->only('email', 'password');
+        // if (Auth::attempt($credentials, $request->has('remember'))) {
+        //     return redirect()->intended('/dashboard'); // Rediriger vers la page prévue après la connexion
+        // }
 
         return back()->withErrors([
             'email' => 'Les informations d\'identification fournies ne correspondent pas à nos enregistrements.',

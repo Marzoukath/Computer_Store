@@ -13,40 +13,37 @@ use App\Models\AddComputer;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
+| Here AMAKOEis where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Auth::routes();
 Route::get('/', function () {
-    return view('index');
+    return view('login');
 });
 
 Route::get('/index', function () {
     return view('index');
 })->middleware('auth')->name('index');
 
-// Route::get('register', function () {
-//     return view('register');
-// });
-
-Route::post('register', [UserController::class, 'store'])->name('user.store'); 
-
-
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
-Route::get('/add_computer', [AddComputerController::class, 'create'])->name('add_computer');
-Route::post('/add_computer', [AddComputerController::class, 'store'])->name('add_computer.store');
+Route::middleware('auth')->group(function () {
 
-Route::get('/formulaire', function () {
-    return view('formulaire');
+    Route::get('/add_computer', [AddComputerController::class, 'create'])->name('add_computer');
+    Route::post('/add_computer', [AddComputerController::class, 'store'])->name('add_computer.store');
+
+    Route::get('/formulaire', function () {
+        return view('formulaire');
+    });
+
+    Route::get('/view_computers', [AddComputerController::class, 'index'])->name('view_computers');
+    Route::delete('view_computers/{id}', [AddComputerController::class, 'destroy'])->name('computers.destroy');
+
+    Route::get('view_computers/{id}/edit', [AddComputerController::class, 'edit'])->name('computers.edit');
+
+    Route::put('view_computers/{id}', [AddComputerController::class, 'update'])->name('computers.update');
+
 });
-
-Route::get('/view_computers', [AddComputerController::class, 'index'])->name('view_computers');
-Route::delete('view_computers/{id}', [AddComputerController::class, 'destroy'])->name('computers.destroy');
-
-Route::get('view_computers/{id}/edit', [AddComputerController::class, 'edit'])->name('computers.edit');
-
-Route::put('view_computers/{id}', [AddComputerController::class, 'update'])->name('computers.update');
