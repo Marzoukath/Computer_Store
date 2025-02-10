@@ -39,11 +39,23 @@ Route::middleware('auth')->group(function () {
         return view('formulaire');
     });
 
-    Route::get('/view_computers', [AddComputerController::class, 'index'])->name('view_computers');
-    Route::delete('view_computers/{id}', [AddComputerController::class, 'destroy'])->name('computers.destroy');
+    // Route::get('/view_computers', [AddComputerController::class, 'index'])->name('view_computers');
+    // Route::delete('view_computers/{id}', [AddComputerController::class, 'destroy'])->name('computers.destroy');
 
-    Route::get('view_computers/{id}/edit', [AddComputerController::class, 'edit'])->name('computers.edit');
+    // Route::get('view_computers/{id}/edit', [AddComputerController::class, 'edit'])->name('computers.edit');
 
-    Route::put('view_computers/{id}', [AddComputerController::class, 'update'])->name('computers.update');
+    // Route::put('view_computers/{id}', [AddComputerController::class, 'update'])->name('computers.update');
 
 });
+
+// Route::get('/view_computer', function () {
+//     return view('view_computer');
+// });
+
+
+Route::get('/view_computer', [AddComputerController::class, 'index'])->name('view_computer');
+Route::delete('view_computer/{id}', [AddComputerController::class, 'destroy'])->name('computers.destroy');
+
+Route::get('view_computer/{id}/edit', [AddComputerController::class, 'edit'])->name('computers.edit');
+
+Route::put('view_computer/{id}', [AddComputerController::class, 'update'])->name('computers.update');

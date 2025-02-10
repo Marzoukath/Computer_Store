@@ -14,7 +14,7 @@ class AddComputerController extends Controller
     public function index()
     {
         $computers = AddComputer::all(); // Récupérer tous les ordinateurs
-        return view('view_computers', compact('computers'));
+        return view('view_computer', compact('computers'));
     }
 
     /**
@@ -103,7 +103,7 @@ class AddComputerController extends Controller
         $computer = AddComputer::findOrFail($id);
         $computer->update($request->all());
     
-        return redirect()->route('view_computers')->with('success', 'Ordinateur mis à jour avec succès');
+        return redirect()->route('view_computer')->with('success', 'Ordinateur mis à jour avec succès');
     }
 
     /**
@@ -116,6 +116,6 @@ class AddComputerController extends Controller
     $computer = AddComputer::findOrFail($id);
     $computer->delete();
 
-    return redirect()->route('view_computers')->with('success', 'Ordinateur supprimé avec succès');
+    return redirect()->route('view_computer')->with('success', 'Ordinateur supprimé avec succès');
     }
 }
