@@ -28,7 +28,7 @@ class LoginController extends Controller
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
 
-            return redirect()->intended(route('index'));
+            return redirect()->intended(route('view_computer'));
         }
         // $credentials = $request->only('email', 'password');
         // if (Auth::attempt($credentials, $request->has('remember'))) {

@@ -17,40 +17,46 @@
 
 <body id="page-top">
     <div id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laptop"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Abdias Computer</div>
-            </a>
-            <hr class="sidebar-divider my-0">
-            <li class="nav-item">
-                <a class="nav-link" href="view_computers">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Main pages:</h6>
-                        <a class="collapse-item" href="login">Login</a>
-                        <a class="collapse-item" href="view_computers">View computers</a>
-                        <a class="collapse-item" href="add_computer">Add computers</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404">404 Page</a>
-                        <a class="collapse-item" href="blank">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+<!-- Sidebar - Brand -->
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+    <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-laptop"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">Abdias Computer</div>
+</a>
+
+<!-- Divider -->
+<hr class="sidebar-divider my-0">
+
+<!-- Nav Item - Voir les Computers Saved -->
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('view_computer') }}">
+        <i class="fas fa-fw fa-desktop"></i>
+        <span>Voir les Computers Saved</span>
+    </a>
+</li>
+
+<!-- Divider -->
+<hr class="sidebar-divider">
+
+
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('add_computer') }}">
+        <i class="fas fa-fw fa-plus-circle"></i>
+        <span>Ajouter un Computer</span>
+    </a>
+</li>
+
+<!-- Divider -->
+<hr class="sidebar-divider d-none d-md-block">
+
+<!-- Sidebar Toggler -->
+<div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+</div>
+</ul>
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
     <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
