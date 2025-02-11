@@ -11,25 +11,25 @@
 
     <title>Abdias Computer-Manage</title>
 
-<!-- Custom fonts for this template-->
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <!-- Lien vers Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Script Bootstrap JS -->
+    <!-- Script Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap Delete Confirmation Modal</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Bootstrap Delete Confirmation Modal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/view.css" rel="stylesheet">
@@ -44,43 +44,43 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laptop"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Abdias Computer</div>
-    </a>
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Abdias Computer</div>
+            </a>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
 
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('view_computer') }}">
-            <i class="fas fa-fw fa-desktop"></i>
-            <span>Voir les Computers Saved</span>
-        </a>
-    </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('view_computer') }}">
+                    <i class="fas fa-fw fa-desktop"></i>
+                    <span>Voir les Computers Saved</span>
+                </a>
+            </li>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider">
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('add_computer') }}">
-            <i class="fas fa-fw fa-plus-circle"></i>
-            <span>Ajouter un Computer</span>
-        </a>
-    </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('add_computer') }}">
+                    <i class="fas fa-fw fa-plus-circle"></i>
+                    <span>Ajouter un Computer</span>
+                </a>
+            </li>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
 
-    <!-- Sidebar Toggler -->
-    <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-    </div>
-</ul>
+            <!-- Sidebar Toggler -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
 
         <!-- End of Sidebar -->
 
@@ -141,14 +141,14 @@
 
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                          
 
 
-  
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -182,16 +182,14 @@
                     </ul>
 
                 </nav>
-               
+
 
                 <div class="container">
-        <!-- Exemple d'ordinateur -->
     @foreach ($computers as $computer)
-    <div class="card">
-    <img src="{{ asset('storage/' . $computer->photo    ) }}" alt="Ordinateur">
+    <div class="card mb-3">
+        <img src="{{ asset('storage/' . $computer->photo) }}" alt="Ordinateur" class="card-img-top">
 
-
-        <div class="card-content">
+        <div class="card-body">
             <h3>Marque: {{ $computer->marque }}</h3>
             <p>Modèle: {{ $computer->modele }}</p>
             <p>Processeur: {{ $computer->processeur }}</p>
@@ -206,14 +204,14 @@
             <p>Mémoire vidéo: {{ $computer->memoire_video }} Go</p>
             <p>Écran tactile: {{ $computer->ecran_tactile ? 'Oui' : 'Non' }}</p>
             <p>Génération: {{ $computer->generation }}</p>
-            <p>Autonomie: {{ $computer->autonomie }} heures</p>  
+            <p>Autonomie: {{ $computer->autonomie }} heures</p>
             <div class="price">{{ $computer->prix }} €</div>
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal-{{ $computer->id }}">Modifier</button>
             <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $computer->id }}">Supprimer</button>
         </div>
     </div>
-</div>
-         <!-- Modal Modifier -->
+
+    <!-- Modal Modifier -->
     <div class="modal fade" id="editModal-{{ $computer->id }}" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -269,14 +267,16 @@
             </div>
         </div>
     </div>
-@endforeach 
-</div>
+    @endforeach
 </div>
 
-            
-
+            </div>
         </div>
-        <!-- End of Content Wrapper -->
+
+
+
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
