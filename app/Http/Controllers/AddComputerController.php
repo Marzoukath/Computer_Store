@@ -97,7 +97,7 @@ class AddComputerController extends Controller
         $request->validate([
             'marque' => 'required|string|max:255',
             'modele' => 'required|string|max:255',
-            'price' => 'required|numeric',
+            'prix' => 'required|numeric',
         ]);
     
         $computer = AddComputer::findOrFail($id);

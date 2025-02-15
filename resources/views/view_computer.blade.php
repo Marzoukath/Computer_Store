@@ -232,6 +232,63 @@
                             <input type="text" class="form-control" id="modele" name="modele" value="{{ $computer->modele }}">
                         </div>
                         <div class="mb-3">
+                            <label for="marque" class="form-label">Processeur</label>
+                            <input type="text" class="form-control" id="processeur" name="processeur" value="{{ $computer->processeur }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpu" class="form-label">CPU</label>
+                            <input type="text" class="form-control" id="cpu" name="cpu" value="{{ $computer->cpu }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="core" class="form-label">Nombre de cœurs</label>
+                            <input type="text" class="form-control" id="core" name="core" value="{{ $computer->core }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ram" class="form-label">RAM (Go)</label>
+                            <input type="text" class="form-control" id="ram" name="ram" value="{{ $computer->ram }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="type_stockage" class="form-label">Type de stockage</label>
+                            <input type="text" class="form-control" id="type_stockage" name="type_stockage" value="{{ $computer->type_stockage }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="capacite_stockage" class="form-label">Capacité de stockage (Go)</label>
+                            <input type="text" class="form-control" id="capacite_stockage" name="capacite_stockage" value="{{ $computer->capacite_stockage }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="taille_ecran" class="form-label">Taille de l'écran (")</label>
+                            <input type="text" class="form-control" id="taille_ecran" name="taille_ecran" value="{{ $computer->taille_ecran }}">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="clavier" class="form-label">Clavier</label>
+                            <input type="text" class="form-control" id="clavier" name="clavier" value="{{ $computer->clavier }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="carte_graphique" class="form-label">Carte graphique</label>
+                            <input type="text" class="form-control" id="carte_graphique" name="carte_graphique" value="{{ $computer->carte_graphique }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="memoire_video" class="form-label">Mémoire vidéo (Go)</label>
+                            <input type="text" class="form-control" id="memoire_video" name="memoire_video" value="{{ $computer->memoire_video }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ecran_tactile" class="form-label">Écran tactile</label>
+                            <select class="form-select" id="ecran_tactile" name="ecran_tactile">
+                                <option value="1" {{ $computer->ecran_tactile ? 'selected' : '' }}>Oui</option>
+                                <option value="0" {{ !$computer->ecran_tactile ? 'selected' : '' }}>Non</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="generation" class="form-label">Génération</label>
+                            <input type="text" class="form-control" id="generation" name="generation" value="{{ $computer->generation }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="autonomie" class="form-label">Autonomie (heures)</label>
+                            <input type="text" class="form-control" id="autonomie" name="autonomie" value="{{ $computer->autonomie }}">
+                        </div>
+                        
+                        <div class="mb-3">
                             <label for="price" class="form-label">Prix (€)</label>
                             <input type="text" class="form-control" id="price" name="prix" value="{{ $computer->prix }}">
                         </div>
